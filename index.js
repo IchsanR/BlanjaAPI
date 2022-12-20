@@ -42,7 +42,7 @@ try {
 		count = count + 1;
 		socketController(io, socket);
 	})
-
+	
 	server.listen(process.env.PORT, () => {
 		console.log("SERVICE IS RUNNING ON PORT " + process.env.PORT);
 	});

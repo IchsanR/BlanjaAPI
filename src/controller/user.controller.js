@@ -141,7 +141,23 @@ const userController = {
 
     await userModel.updatePhoto(id, `${image.secure_url}|&&|${image.public_id}`)
     .then((result) => {
-      success(res, result.rowCount, "success", "update photo success");
+      userModel.selectCustomerId(id)
+      .then((result) => {
+        if(result.rowCount !== 0){
+          success(res, result.rows, "success", "update photo success");
+        }else{
+          userModel.selectSellerId(id)
+          .then((result) => {
+            success(res, result.rows, "success", "update photo success");
+          })
+          .catch((err) => {
+            failed(res, err.message, "failed", "failed to get seller detail");
+          })
+        }
+      })
+      .catch((err) => {
+        failed(res, err.message, "failed", "failed to get seller detail");
+      })
     })
     .catch((err) => {
       failed(res, err.message, "failed", "failed to update photo");
