@@ -6,7 +6,7 @@
     <image align="center" width="200" src='./public/blanja_logo.png' />
   </p>
   <p align="center">
-    <a href="https://blanja-yakusadi.up.railway.app">View API Demo</a>
+    <a href="https://blanja-yksd.vercel.app/">View Demo</a>
   </p>
 </p>
 
@@ -83,7 +83,7 @@ This is an example of things you need to use the application and how to install 
 
 1. Clone the repo
 ```sh
-git clone https://github.com/reijiren/BlanjaAPI.git
+git clone https://github.com/IchsanR/BlanjaAPI.git
 ```
 2. Install NPM packages
 ```sh
@@ -122,7 +122,7 @@ Contributions are what make the open source community such an amazing place to b
 <!-- RELATED PROJECT -->
 ## Related Project
 This API is used in [Blanja Application](https://blanja-yksd.vercel.app).
-* [View Documentation](https://github.com/reijiren/BlanjaApp)
+* [View Documentation](https://github.com/IchsanR/BlanjaApp)
 
 
 <!-- CONTACT -->
